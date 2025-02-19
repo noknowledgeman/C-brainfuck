@@ -4,6 +4,7 @@
 
 
 #define NUM_CELLS 30000
+#define DEBUG_CELLS 20
 
 struct Interpreter {
     struct Tokens *program;

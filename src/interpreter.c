@@ -55,9 +55,26 @@ void interpret(struct Interpreter *intr) {
             intr->arr[intr->pointer] = getchar();
             break;
         case Debug: 
+            debug(intr);
+            break;
         default:
             break;
         }
     }
 }
 
+void debug(struct Interpreter *interpreter) {
+    printf("The program: ");
+    for (int i  = 0; i < interpreter->program->len; i++) {
+        printf("%d ", interpreter->program->tokens[i]);
+    }
+    printf("\n");
+
+    printf("The pointer: %d\n", interpreter->pointer);
+
+    printf("The array: ");
+    for (int i = 0; i < DEBUG_CELLS; i++) {
+        printf("%d ", interpreter->arr[i]);
+    }
+    printf("\n");
+}

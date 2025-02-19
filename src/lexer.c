@@ -64,9 +64,13 @@ struct Tokens *tokenize(const char *str) {
         case ',':
             tokens[i] = In;
             break;
-        case '~':
+        case '#':
             tokens[i] = Debug;
-        
+            break;
+        case '!':
+            fprintf(stdin, "%s", &str[i]);
+            i = str_len;
+            break;
         default:
             continue;
         }
