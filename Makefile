@@ -6,8 +6,11 @@ SOURCE_DIR=./src
 
 TARGET=$(TARGET_DIR)/brainfuck
 
-$(TARGET): ./target/main.o ./target/lexer.o ./target/interpreter.o 
+$(TARGET): ./target/main.o ./target/lexer.o ./target/interpreter.o ./target/compiler.o
 	$(CC) $(CFLAGS) -o $@ $^ -lm
+
+./target/compiler.o: ./src/compiler.c ./src/compiler.h
+	$(CC) $(CFLAGS) -c -o $@ $< -lm
 
 ./target/lexer.o: ./src/lexer.c ./src/lexer.h
 	$(CC) $(CFLAGS) -c -o $@ $< -lm

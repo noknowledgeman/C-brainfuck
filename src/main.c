@@ -1,11 +1,13 @@
 #include "lexer.h"
 #include "interpreter.h"
+#include "compiler.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        fprintf(stderr, "Error when finding the path\n");
+        fprintf(stderr, "Error when finding the path\n"
+            "Usage: ./brainfuck <file_path> [Options]\n");
         return 1;
     }
 
