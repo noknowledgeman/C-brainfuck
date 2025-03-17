@@ -7,7 +7,8 @@
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "Error when finding the path\n"
-            "Usage: ./brainfuck <file_path> [Options]\n");
+            "Usage: ./brainfuck <file_path> [Flags]\n"
+            "Flags = -i, -c, -d, -s, -x1, -x2, -x3, -size=<number of cells>");
         return 1;
     }
 

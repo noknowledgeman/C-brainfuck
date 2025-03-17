@@ -3,7 +3,7 @@ A brainfuck interpreter and compiler in C.
 
 ## Usage
 
-```
+```console
 make
 ```
 
@@ -15,6 +15,7 @@ Run the makefile and you get the interpreter binary in /target.
 - Pbrain implementation to accept procedures
 - CBrain
 - BrainFork
+- Moanfuck or any trivial brainfuck substitution
 
 ## License
 [MIT](./LICENSE)
